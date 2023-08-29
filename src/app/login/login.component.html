@@ -1,0 +1,22 @@
+<div>
+  <section>
+
+    <h1>Login</h1>
+
+    <form [formGroup]="loginForm">
+      <div>
+        <span> Username:</span>
+        <input formControlName="username" type="text" class="input" [class.input--error]="loginForm.controls['username'].invalid ">
+        <span *ngIf="loginForm.controls['username'].invalid">
+          Please enter a user name
+        </span>
+      </div>
+      <div>
+        <span> Password:</span>
+        <input formControlName="password" type="password" class="input" [class.input--error]="loginForm.controls['password'].invalid ">
+        <span *ngIf="loginForm.controls['password'].invalid">
+        </span>
+      </div>
+    </form>
+  </section>
+</div>
