@@ -1,12 +1,17 @@
 
-<section>
-  <h1>Encora List</h1>
-  <div *ngFor="let itemList of listArray ">
+<section class="encora-list">
+  <h1 class="encora-list__title">Encora List</h1>
+  <div class="encora-list__items" *ngFor="let itemList of listArray ">
 
-      <div>{{itemList.id}}</div>
-      <div>{{itemList.userId}}</div>
-      <div>{{itemList.title}}</div>
-      <div>{{itemList.body}}</div>
-
+    <div class="econra-item-container">
+      <div class="encora-item-container__values">
+        <div>{{itemList.id}}</div>
+        <div>{{itemList.userId}}</div>
+      </div>
+      <div class="encora-item-container__post">
+        <div>{{itemList.title}}</div>
+        <div>{{itemList.body}}</div>
+      </div>
+    </div>
   </div>
 </section>

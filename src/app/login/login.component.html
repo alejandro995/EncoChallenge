@@ -1,22 +1,24 @@
-<div>
+<div class="login-container">
   <section>
-
-    <h1>Login</h1>
-
+    <h1 class="login-container__head">Login</h1>
     <form [formGroup]="loginForm">
-      <div>
-        <span> Username:</span>
-        <input formControlName="username" type="text" class="input" [class.input--error]="loginForm.controls['username'].invalid ">
-        <span *ngIf="loginForm.controls['username'].invalid">
+      <div class="login-input">
+        <span class="login-input__legend"> Username:</span>
+        <input class="login-input__input" formControlName="username" type="text" class="input" [class.input--error]="loginForm.controls['username'].invalid ">
+        <span class="login-input__error" *ngIf="loginForm.controls['username'].invalid">
           Please enter a user name
         </span>
       </div>
-      <div>
-        <span> Password:</span>
-        <input formControlName="password" type="password" class="input" [class.input--error]="loginForm.controls['password'].invalid ">
-        <span *ngIf="loginForm.controls['password'].invalid">
+      <div class="login-input">
+        <span class="login-input__legend"> Password:</span>
+        <input class="login-input__input" formControlName="password" type="password" class="input" [class.input--error]="loginForm.controls['password'].invalid ">
+        <span class="login-input__error" *ngIf="loginForm.controls['password'].invalid"> Please enter a password
         </span>
       </div>
     </form>
+
+    <div class="login-container__btn">
+      <button (click)="setLogin()">LOG IN</button>
+    </div>
   </section>
 </div>
