@@ -23,7 +23,6 @@ export class IsLoginGuard implements CanActivate {
   }
 
   canActivate(route: ActivatedRouteSnapshot) {
-    debugger;
       if(!this.permission.isLogged()) {
         this.router.navigate(['/login']);
       }

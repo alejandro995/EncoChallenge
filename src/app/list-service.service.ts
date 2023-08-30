@@ -21,7 +21,7 @@ export class ListServiceService {
   getListByUserId(idNumber : number):Observable<any> {
     this.userId = idNumber;
     return this.httpClient.get(`${this.requestUrlAPI}posts`).pipe(
-      filter((valueList:any) => valueList.userId == idNumber)
+      filter((valueList:any) => valueList.userId === idNumber)
     )
   }
 
@@ -29,7 +29,6 @@ export class ListServiceService {
     if(password === 'password' && this.getListByUserId(id)) {
       this.logged = true;
       this.router.navigate(['']);
-      debugger;
     } else {
       this.logged = false;
     }

@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit{
   }
 
   getUsers() {
-    return this.listService.getListByUserId(this.listService.userId).subscribe((value) => this.listArray = value);
+    this.listService.getList().subscribe((value) => { this.listArray = value});
+    this.listArray = this.listArray.filter(value => value.userId === this.listService.userId);
   }
 }
