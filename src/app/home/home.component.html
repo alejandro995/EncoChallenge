@@ -1,8 +1,12 @@
 
 <section>
   <h1>Encora List</h1>
-  <div *ngFor=""></div>
-  <div>
+  <div *ngFor="let itemList of listArray ">
+
+      <div>{{itemList.id}}</div>
+      <div>{{itemList.userId}}</div>
+      <div>{{itemList.title}}</div>
+      <div>{{itemList.body}}</div>
 
   </div>
 </section>
